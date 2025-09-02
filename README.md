@@ -175,15 +175,42 @@ Unlike Bag-of-Words or TF-IDF (which are sparse), embeddings place similar words
 
 ---
 
-## 📝 Prompt Engineering  
-- Crafting **effective prompts** for LLMs.  
-- **Types:**  
-  - Zero-shot → No example  
-  - Few-shot → With examples  
-  - Chain-of-thought → Step-by-step reasoning  
-  - Instruction-tuning → Direct command style  
+## 📝 Prompt Engineering
+
+**Definition:**  
+Crafting **effective prompts** for LLMs to get accurate and relevant outputs.
 
 ---
+
+### 🔹 Types of Prompting
+
+1. **Zero-shot → No examples**  
+   - No examples are provided.  
+   - The LLM must solve the task **based only on the instruction**.  
+   - ✅ Example: `"Translate 'AI is powerful' to French"` → `"L'IA est puissante."`
+
+2. **Few-shot → With examples**  
+   - The prompt includes **a few input-output examples** to guide the model.  
+   - Helps the model understand the **style, tone, or format** expected.  
+   - ✅ Example:  
+     ```
+     Translate English to French:
+     - "Good morning" → "Bonjour"
+     - "How are you?" → "Comment ça va?"
+     - "AI is powerful" → 
+     ```
+
+3. **Chain-of-thought → Step-by-step reasoning**  
+   - Encourages the model to **reason step-by-step** before giving the final answer.  
+   - Improves **logical reasoning, math, and multi-step problems**.  
+   - ✅ Example: `"If there are 3 apples and you eat 1, how many are left? Show reasoning."`  
+     Output: `"There are 3 apples. If 1 is eaten, 3 - 1 = 2. Answer: 2."`
+
+4. **Instruction-tuning → Direct command style**  
+   - Uses prompts written in **instruction style** (clear, task-oriented).  
+   - Many modern LLMs are trained/fine-tuned on such data (e.g., GPT, T5, FLAN).  
+   - ✅ Example: `"Summarize the following text in 3 bullet points."`
+
 
 ## 📡 RAG (Retrieval-Augmented Generation)  
 - Combines **LLMs + external knowledge base**.  
